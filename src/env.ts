@@ -1,0 +1,37 @@
+const NEWS_API_DOMAIN =
+  process.env.NEXT_PUBLIC_NEWS_API_DOMAIN || "https://content.guardianapis.com/";
+const NEWS_API_VERSION = process.env.NEXT_PUBLIC_NEWS_API_VERSION || "v2/";
+const NEWS_API_ENDPOINT_EVERYTHING =
+  process.env.NEXT_PUBLIC_NEWS_API_ENDPOINT_EVERYTHING || "everything";
+const NEWS_API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY || "";
+
+const GUARDIAN_API_DOMAIN =
+  process.env.NEXT_PUBLIC_GUARDIAN_NEWS_DOMAIN || "https://content.guardianapis.com/";
+const GUARDIAN_API_ENDPOINT_SEARCH = process.env.NEXT_PUBLIC_GUARDIAN_ENDPOINT_SEARCH || "search";
+const GUARDIAN_API_KEY = process.env.NEXT_PUBLIC_GUARDIAN_API_KEY;
+
+const NYTIMES_API_DOMAIN =
+  process.env.NEXT_PUBLIC_NYTIMES_NEWS_DOMAIN || "https://api.nytimes.com/svc/search/";
+const NYTIMES_API_VERSION = process.env.NEXT_PUBLIC_NYTIMES_NEWS_VERSION || "v2/";
+const NYTIMES_API_ENDPOINT_SEARCH =
+  process.env.NEXT_PUBLIC_NYTIMES_NEWS_ENDPOINT_SEARCH || "articlesearch.json";
+const NYTIMES_API_KEY = process.env.NEXT_PUBLIC_NYTIMES_NEWS_API_KEY || "";
+
+const NODE_ENV = process.env.NODE_ENV || "development";
+const PAGE_SIZE = process.env.NEXT_PUBLIC_RECORDS_PER_PAGE || 10;
+
+export {
+  NEWS_API_DOMAIN,
+  NEWS_API_VERSION,
+  NEWS_API_ENDPOINT_EVERYTHING,
+  NEWS_API_KEY,
+  GUARDIAN_API_DOMAIN,
+  GUARDIAN_API_ENDPOINT_SEARCH,
+  GUARDIAN_API_KEY,
+  NYTIMES_API_DOMAIN,
+  NYTIMES_API_VERSION,
+  NYTIMES_API_ENDPOINT_SEARCH,
+  NYTIMES_API_KEY,
+  NODE_ENV,
+  PAGE_SIZE
+};
