@@ -75,7 +75,7 @@ const NewsListing = () => {
                 {
                     data.map((item, index) => {
                         return(
-                            <ListingCard key={index} url="/test-news-image.webp" item={item} />
+                            <ListingCard key={index} defaultImageUrl="/no_image_available.jpg" item={item} />
                         );
                     })
                 }

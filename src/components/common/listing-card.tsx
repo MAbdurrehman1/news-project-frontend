@@ -5,7 +5,6 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import Image from "next/image";
-// import { Badge } from "../ui/badge";
 import { FormattedResults } from "@/types/common";
 import { formatDateWithDay } from "@/helpers/format-dates";
 import { 
@@ -18,20 +17,20 @@ import { FaRegBookmark, FaBookmark } from "react-icons/fa6";
 import { useState } from "react";
 
 export interface ListingCardProps {
-  url: string,
+  defaultImageUrl: string,
   page?: number,
   item: FormattedResults
 }
 
 const ListingCard = ({
-  url,
+  defaultImageUrl,
   item
 }: ListingCardProps) => {
   const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
   return (
     <Card className="overflow-clip h-full w-full cursor-pointer" onClick={() => window.open(item.url, '_blank')}>
         <CardContent className="relative h-[280px] mb-3">
-          <Image src={item.image || url} fill alt="News Image" />
+          <Image src={item.image || defaultImageUrl} fill alt="News Image" />
         </CardContent>
         <CardFooter>
           <div className="flex flex-col gap-6 w-full">
